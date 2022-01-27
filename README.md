@@ -16,4 +16,4 @@ Open Telemetry agent version: 1.10.0
 
 6. Get a heap dump by jconsole
 
-7. Open the dump by Eclipse MAT
+7. Open the dump by Eclipse Memory Analyzer

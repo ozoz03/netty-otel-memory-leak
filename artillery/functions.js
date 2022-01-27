@@ -6,13 +6,11 @@ module.exports = {
 request_num = 0;
 
 function beforeRequest(request, context, ee, next) {
-  request.json = { number: request_num++ }
-  console.log("\tREQUEST:\t" + request.json.number);
+  console.log("\tREQUEST:  #" + request_num++);
   return next();
 }
 
 function afterResponse(request, response, context, ee, next) {
-	console.log("\tRESPONSE:\t" + response.body);  
+  console.log("\tRESPONSE: #" + request_num);
   return next();
 }
-

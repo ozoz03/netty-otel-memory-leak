@@ -1,16 +1,9 @@
 config:
   target: 'http://localhost'
-  http:
-    tls:
-      rejectUnauthorized: false
   phases:
     - duration: 10800
       arrivalRate: 100
   processor: "./functions.js"
-  defaults:
-    headers:
-      VGS-Client: 'artillery'
-      Content-Type: 'application/json'
 scenarios:
   - flow:
     - post:
